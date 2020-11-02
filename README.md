@@ -16,3 +16,5 @@ It cannot take action, all it can do is give people information with the hope th
 
 With all good hope, we wish that it can make some difference and avoid something unwanted from happening.
 
+
+# Modelling Transmission Dynamics
