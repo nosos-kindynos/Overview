@@ -16,6 +16,9 @@ It cannot take action, all it can do is give people information with the hope th
 
 With all good hope, we wish that it can make some difference and avoid something unwanted from happening.
 
+
+
+
 # Workflow
 
 ### User input -----------> Modelling data into a one on one risk mapping -----------> Computing net risk of the user based mapping -----------> Return data to user
