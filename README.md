@@ -34,14 +34,14 @@ Assuming soical relationship of 5 people namely A,B,C,D and E with their induvid
                       0.5  /     \ 0.5 
                           /       \      0.5 
                          A         D - - - - - - E 
-                         \        /   
-                     0.5  \      /  0.5   
-                           \    /         
+                          \       /   
+                     0.5   \     /  0.5   
+                            \   /         
                               C
                               
                               
                               
-                              
+ The net risk                              
 
 
 
