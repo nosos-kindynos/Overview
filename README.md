@@ -7,7 +7,7 @@ This project is just a prototype and has not been designed to fully  be put to m
 
 # Disease Risk Estimation
 
-###### Infectious disease transmission risk estimation by modelling disease transmission dynamics through user updated social interactions.
+#### Infectious disease transmission risk estimation by modelling disease transmission dynamics through user updated social interactions.
 
 This project is designed for estimating risks based on social connections assumming relatively simple and ideal one to one transmission dynamics with the hope that the necessarry protocols such as hygiene,social distancing, wearing surgical face masks, etc. are being followed and may not be capable of analysing large social gatherings or physical contacts where transmission dynamics get more advanced and relatively chaotic , making parameters assumed insignificant here dominant enough to produce a significantly different result ,  thus require more advanced and sophesticated methods.
 
