@@ -24,10 +24,10 @@ With all good hope, we wish that it can make some difference and avoid something
 ### User input -----------> Modelling data into a one on one risk mapping -----------> Computing net risk of the user based mapping -----------> Return data to user
 
 
-An example of the process may provide an incentive.
+An example of the process may provide an incentive of the algorithmic flow for computing the net risk.
 ## Example
 
-Assuming soical relationship of 5 people namely A,B,C,D and E with their induvidual relationships given is given a one on one transfer chance , is modelled graphically as follows:
+Assuming soical relationship of 5 people namely A,B,C,D and E with their induvidual relationships given is given a one on one transfer chance and is modelled graphically as follows:
                     
                               B
                             /   \
@@ -41,7 +41,7 @@ Assuming soical relationship of 5 people namely A,B,C,D and E with their induvid
                               
                               
                               
- The net risk                              
+ Since its not a closed ecosystem nor does this project posses an autonomous input system , we rely on the user to update us when their has been a breach of their safety                           
 
 
 
