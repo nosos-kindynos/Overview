@@ -49,10 +49,10 @@ Assuming soical relationship of 5 people namely A,B,C,D and E with their induvid
                               
                               
                               
-Assumming user A updates on the compromisation of his health based on a medical confirmation , user E wishes to know the risk A poses to him.
+Assumming user A's health has been compromised and the information is based on a medical confirmation , user E wishes to know the risk A poses to him.
 Intuitively we may see that both C and D posses 0.5 chance of contracting the disease throough paths (A,B) and (A,C) respectively and so D has 0.25 chance of contecting the disease from B and C each.
 
-We assume the chances contracting of a disease from different sources to be independent , since transmssion dynamics vary from disease to disease and we are not very well informed on their mechanism.
+We assume the chances contracting of a disease from different sources to be independent , since transmssion dynamics vary from disease to disease and we are not very well aware of their mechanism.
 
 So the risk of user D can be calculated by taking a set union of both the probabilities , which is 0.25 + 0.25 - (0.25 x 0.25) = 0.4375
 A different view may be to calulate the chance of D NOT contracting the disease from either B or C , and then taking the conjugate of the same , which is 
@@ -91,7 +91,7 @@ We hope that the above example provided an incentive and clarity on the idea.
                _______________________________________________________________________________
                           
                           
-So after modelling the social interaction into a risk mapping , the compuatation can be done by finding all possible paths from a source to a target and then calculating the risk by taking the internal events in the paths as an intersection and then a whole union of all the possible paths , and then substituting the independent chnaces once a suitable expression has been obatined.
+So after modelling the social interaction into a risk mapping , the compuatation can be done by finding all possible paths from a source to a target and then calculating the risk by taking the internal events in the paths as an intersection and then a whole union of all the possible paths , and then substituting the independent chances once a suitable expression has been obatined.
 
 
                _______________________________________________________________________________
