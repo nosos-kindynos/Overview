@@ -2,7 +2,7 @@
 
 This project is completely open source and we look forward to considering your suggestions about any error we might have overlooked or any logical fallacy we might have not been able to figure out , or even a scope for improvement as a user's actions and judgements concerning their own safety might use these statistics as a dominant parameter and giving them inaccurate results might lead to a compromise of their safety , contradicting the whole intention of this project.
 
-This project is just a prototype and has not been designed to fully  be put to mass use , but rather to just convey an idea , which we hope can provide an incentive in the development of further ideas thus progressing society as a whole.
+This project is just a prototype and has not been designed to fully be put to mass use , but rather to just convey an idea , which we hope can provide an incentive in the development of further ideas thus progressing society as a whole.
 
 
 # Disease Risk Estimation
@@ -35,7 +35,7 @@ An example of the process may provide an incentive of the algorithmic flow for c
 
 ## Example
 
-Assuming soical relationship of 5 people namely A,B,C,D and E with their induvidual relationships given is given a one on one transfer chance and is modelled graphically as follows:
+Assuming social relationship of 5 people namely A,B,C,D and E with their individual relationships given is given a one on one transfer chance and is modelled graphically as follows:
                     
                               B
                             /   \
@@ -49,8 +49,8 @@ Assuming soical relationship of 5 people namely A,B,C,D and E with their induvid
                               
                               
                               
-Assumming user A's health has been compromised and the information is based on a medical confirmation , user E wishes to know the risk A poses to him.
-Intuitively we may see that both C and D posses 0.5 chance of contracting the disease throough paths (A,B) and (A,C) respectively and so D has 0.25 chance of contecting the disease from B and C each.
+Assuming user A's health has been compromised and the information is based on a medical confirmation , user E wishes to know the risk A poses to him.
+Intuitively we may see that both C and D possess 0.5 chance tracting the disease throough paths (A,B) and (A,C) respectively and so D has 0.25 chance of contecting the disease from B and C each.
 
 We assume the chances contracting of a disease from different sources to be independent , since transmssion dynamics vary from disease to disease and we are not very well aware of their mechanism.
 
