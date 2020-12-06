@@ -54,7 +54,7 @@ Intuitively we may see that both B and C possess 0.5 chance of contracting the d
 We have assumed the chances of contracting of a disease from different sources to be independent of each other, since transmssion dynamics vary from disease to disease and we are not very well aware of their mechanism.
 
 So the risk of user D can be calculated by taking a set union of both the probabilities , which is 0.25 + 0.25 - (0.25 x 0.25) = 0.4375
-A different view may be to calulate the chance of D NOT contracting the disease from either B or C , and then taking the conjugate of the same , which is 
+A different approach is to calculate the chance of D NOT contracting the disease from either B or C , and then taking the conjugate of the same , which is 
 (1 - 0.25) x (1 - 0.25) = 0.5625 chance of NOT contracting , hence a 1 - 0.5625 = 0.4375 chance of contracting.
 
 So since D has a 0.4375 chance of contracting , the chance of user E contecting is a set intersection of the chance of D contracting it and D transferring it , since assumed to be independent , the intersection can be treated as a binary multiplication. 
