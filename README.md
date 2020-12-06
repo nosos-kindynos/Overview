@@ -1,6 +1,6 @@
 
 
-This project is completely open source and we look forward to your suggestions regarding any errors or logical fallacies overlooked, and general scope for improvement. As a user might base his judgements on these statistics, inaccurate results would compromise their safety, thus defeating the whole intention of this project.
+This project is completely open source and we look forward to your suggestions regarding any errors or logical fallacies overlooked, and regarding general scope for improvement. As a user might base his judgements on these statistics, inaccurate results would compromise their safety, thus defeating the whole intention of this project.
 
 This project is only a prototype and has not been designed for mass use. Rather, it conveys an idea which we hope will provide an incentive to furthering development along these lines, thus progressing society as a whole.
 
