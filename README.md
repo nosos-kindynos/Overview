@@ -18,23 +18,19 @@ Once we estimate the risk of all users, we can segregate users and suggest which
 It provides the user with information that will enable them to make the necessary judgements.
 
 With all good hope, we wish that it can make some difference and avoid something unwanted from happening.
-
-                          _______________________________________________________________________________
-
-
+___
 
 # Workflow
 
-### User input -----------> Modelling data into a one on one risk mapping -----------> Computing net risk of the user based mapping -----------> Return data to user
+```User input --> Modelling data into a one on one risk mapping --> Computing net risk of the user based mapping --> Return data to user```
 
 
 An example of the process may provide an incentive of the algorithmic flow for computing the net risk.
-
-                          _______________________________________________________________________________
+___
 
 ## Example
 
-Assuming social relationship of 5 people namely A,B,C,D and E with their individual relationships given is given a one on one transfer chance and is modelled graphically as follows:
+Assuming social relationship of 5 people namely `A`,`B`,`C`,`D` and `E` with their individual relationships given is given a one on one transfer chance and is modelled graphically as follows:
                     
                               B
                             /   \
@@ -48,53 +44,51 @@ Assuming social relationship of 5 people namely A,B,C,D and E with their individ
                               
                               
                               
-Assuming user A's health has been compromised and the information is based on a medical confirmation, user E wishes to know the risk A poses to him.
-Intuitively we may see that both B and C possess 0.5 chance of contracting the disease throough paths (A,B) and (A,C) respectively and so D has 0.25 chance of contecting the disease from B and C each.
+Assuming user `A`'s health has been compromised and the information is based on a medical confirmation, user `E` wishes to know the risk `A` poses to him.
+Intuitively we may see that both `B` and `C` possess `0.5` chance of contracting the disease through paths `(A,B)` and `(A,C)` respectively and so `D` has `0.25` chance of contecting the disease from `B` and `C` each.
 
 We have assumed the chances of contracting of a disease from different sources to be independent of each other, since transmssion dynamics vary from disease to disease and we are not very well aware of their mechanism.
 
-So the risk of user D can be calculated by taking a set union of both the probabilities , which is 0.25 + 0.25 - (0.25 x 0.25) = 0.4375
-A different approach is to calculate the chance of D NOT contracting the disease from either B or C , and then taking the conjugate of the same , which is 
-(1 - 0.25) x (1 - 0.25) = 0.5625 chance of NOT contracting , hence a 1 - 0.5625 = 0.4375 chance of contracting.
+So the risk of user `D` can be calculated by taking a set union of both the probabilities , which is $0.25 + 0.25 - (0.25 \times 0.25) = 0.4375$
+A different approach is to calculate the chance of `D` NOT contracting the disease from either `B` or `C` , and then taking the conjugate of the same , which is 
+$(1 - 0.25) \times (1 - 0.25) = 0.5625$ chance of NOT contracting , hence a $1 - 0.5625 = 0.4375$ chance of contracting.
 
-So since D has a 0.4375 chance of contracting , the chance of user E contecting is a set intersection of the chance of D contracting it and D transferring it , since assumed to be independent , the intersection can be treated as a binary multiplication. 
+So since `D` has a `0.4375` chance of contracting , the chance of user `E` contecting is a set intersection of the chance of `D` contracting it and `D` transferring it , since assumed to be independent , the intersection can be treated as a binary multiplication. 
 
-Hence user E has a 0.4375 x 0.5 = **0.21875** chance of contracting the given infectious disease.
+Hence user `E` has a $0.4375 \times 0.5 = \textbf{0.21875}$ chance of contracting the given infectious disease.
 
 
-In the above risk calculation, we have only estimated the risk of E and the intermediate values cannot be asserted as the risks for other users.
-Again, as a case in the above example, we calculated user B to only have a 0.5 chance of contracting , but that is only directly from A and is not to be mistaken as the total risk A poses to B , as it is not necessary that only B can infect D.
+In the above risk calculation, we have only estimated the risk of `E` and the intermediate values cannot be asserted as the risks for other users.
+Again, as a case in the above example, we calculated user `B` to only have a `0.5` chance of contracting , but that is only directly from `A` and is not to be mistaken as the total risk `A` poses to `B` , as it is not necessary that only `B` can infect D.
 
-So B has a 0.5 chance of contracting it from A , and a ( 0.5 x 0.5 x 0.5 ) of contracting it from D , hence making it a total of 
- 0.5 + ( 0.5 x 0.5 x 0.5 ) - 0.5 x ( 0.5 x 0.5 x 0.5 ) = 0.6625 chance and not a 0.5 chance.
+So `B` has a `0.5` chance of contracting it from `A` , and a $( 0.5 \times 0.5 \times 0.5 )$ of contracting it from `D` , hence making it a total of 
+ $0.5 + ( 0.5 \times 0.5 \times 0.5 ) - 0.5 \times ( 0.5 \times 0.5 \times 0.5 ) = 0.6625$ chance and not a `0.5` chance.
  
 We also assume here than the disease cannot infect a user who is already part of the chain we are currently using to reach a user , as we are assumming an infection to have a binary state of existence here. So to estimate the risk of a certain user, we need to find all the paths through which a disease can reach the user and return the combined risk factor.
 
-So the ways through which E may be infected are (A-->B-->D-->E) and (A-->C-->D-->E). We can find the set union of the risks from both the paths, but keeping in mind that there may be common relations in all possible paths which may be considered multiple times during calculation - in this case D to E is common.
+So the ways through which `E` may be infected are `(A-->B-->D-->E)` and `(A-->C-->D-->E)`. We can find the set union of the risks from both the paths, but keeping in mind that there may be common relations in all possible paths which may be considered multiple times during calculation - in this case `D` to `E` is common.
 
 Hence by the laws of set theory , the relations are independent events and for a disease to progress through a path , it has to infect all previous users in the path , hence a path may be treated as a set intersection of all the possible events and the net risk can be treated as a set union of all paths.
 
 Hence in this case , the result being (where the event/relation is represented by the 2 users connected by it):
+$$\begin{align}
+&= ( (A,B) \cap (B,D) \cap (D,E) )    \cup    ( (A,C) \cap (C,D) \cap (D,E) ) \\
 
-( (A,B) ∩ (B,D) ∩ (D,E) )    U    ( (A,C) ∩ (C,D) ∩ (D,E) )
+&= ( (A,B) \times (B,D) \times (D,E) ) + ( (A,C) \times (C,D) \times (D,E) ) -    ( (A,B) \cap (B,D) \cap (D,E) )    \cap    ( (A,C) \cap (C,D) \cap (D,E) ) \\
 
-= ( (A,B) x (B,D) x (D,E) ) + ( (A,C) x (C,D) x (D,E) ) -    ( (A,B) ∩ (B,D) ∩ (D,E) )    ∩    ( (A,C) ∩ (C,D) ∩ (D,E) )
+&= ( (A,B) \times (B,D) \times (D,E) ) + ( (A,C) \times (C,D) \times (D,E) ) -    ( (A,B) \times (B,D) \times (D,E) \times (A,C) \times (C,D)  ) \\
 
-= ( (A,B) x (B,D) x (D,E) ) + ( (A,C) x (C,D) x (D,E) ) -    ( (A,B) x (B,D) x (D,E) x (A,C) x (C,D)  )
-
-= ( 0.5^3 + 0.5^3 - 0.5^5 ) = 0.125 + 0.125 - 0.03125 = **0.21875 chance**
+&= ( 0.5^3 + 0.5^3 - 0.5^5 ) = 0.125 + 0.125 - 0.03125 = 0.21875\ \mathrm{chance}
+\end{align}$$
 
 
 We hope that the above example provided an incentive and clarity on the idea.    
 
-               _______________________________________________________________________________
-                          
+___
                           
 So after modelling the social interaction into a risk mapping , the compuatation can be done by finding all possible paths from a source to a target and then calculating the risk by taking the internal events in the paths as an intersection and then a whole union of all the possible paths , and then substituting the independent chances once a suitable expression has been obatined.
 
-
-               _______________________________________________________________________________
-               
+___
 
 The individual subsections of this project can be found in their respective repositories.
 
